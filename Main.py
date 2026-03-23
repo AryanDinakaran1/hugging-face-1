@@ -21,8 +21,13 @@ def summarize(paragraph: str = test_para_1) -> str:
     response = model(paragraph)
     return response[0]['summary_text']
 
+def text_generation(prompt: str) -> str:
+    model = pipeline("text-generation", model="gpt2")
+    response = model(prompt)
+    return response[0]['generated_text']
+
 def main():
-    print(summarize())
+    print(text_generation("Make a short para on the word diabolical"))
 
 if __name__ == "__main__":
     main()
