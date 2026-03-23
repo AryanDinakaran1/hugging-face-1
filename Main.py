@@ -27,7 +27,7 @@ def text_generation(prompt: str) -> str:
     return response[0]['generated_text']
 
 def main():
-    print(text_generation("Make a short para on the word diabolical"))
+    print(summarize())
 
 if __name__ == "__main__":
     main()
